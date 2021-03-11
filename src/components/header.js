@@ -1,42 +1,38 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import Helmet from 'react-helmet';
+import favicon from '../images/favicon.ico';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+	<header className="bg-blue-200 mb-6">
+		<Helmet>
+			<link rel="icon" href={favicon} />
+		</Helmet>
+		<div className="flex mt-0 mb-0 mx-auto max-w-5xl p-5 pt-6 pl-4 align-text-bottom">
+			<Link to="/">
+				<FontAwesomeIcon 
+                    className="fill-current text-gray-800 pr-4 " 
+                    style={{marginTop: '-.3rem'}}
+                    icon={faHome} size="3x" />
+			</Link>
+			<h1 className="m-0 text-4xl">
+				<Link to="/" className="text-black no-underline">
+					{siteTitle}
+				</Link>
+			</h1>
+		</div>
+	</header>
+);
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+	siteTitle: PropTypes.string
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+	siteTitle: ``
+};
 
-export default Header
+export default Header;

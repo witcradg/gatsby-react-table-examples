@@ -1,9 +1,12 @@
+# Created as a study tool and with the intention that the pages be "copyable" and reused in future projects.
+
+```This project includes faker in the package.json. Don't forget to remove it if you're copying the package.json into a production project.```
+
+I replaced namor with faker because namor was causing a webpack error.
+
+***
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
   Gatsby's default starter
 </h1>
