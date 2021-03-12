@@ -8,13 +8,13 @@ His work is remarkable and includes several other interesting React projects tha
 
 Useful Links for his work on react-table:
 <ul>
-<li><a>https://react-table.tanstack.com/</a>
-<li><a>https://github.com/tannerlinsley/react-table</a>
-<li><a>https://react-table.tanstack.com/docs/examples/basic</a>
+    <li> https://react-table.tanstack.com/
+    <li> https://github.com/tannerlinsley/react-table
+    <li> https://react-table.tanstack.com/docs/examples/basic
 </ul>
 
 ## Motivation
-I created this project as a study tool and as a playground for various react-table implementations using Gatsby. I wanted a place to tinker outside active client projects. 
+I created this project as a study tool and as a playground for various react-table implementations using Gatsby. I wanted a place to tinker outside active client projects. I'm opening the project in the hope that someone else will find it useful.
 
 I found a small problem with namor that I was able to fix by replacing it with faker. (Webpack was reporting an issue with crypto.)
 
