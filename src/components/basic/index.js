@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useTable } from 'react-table';
 import Layout from '../layout';
 
-import makeData from './makeData';
+import makeData from '../../util/makeData';
 
 const Styles = styled.div`
 	padding: 1rem;
@@ -110,6 +110,8 @@ export default function Basic() {
 
 	const data = React.useMemo(() => makeData(20), []);
     
+    console.log({data})
+
 	return (
 		<Layout title="React Table: Basic">
 			<p className="p-0">

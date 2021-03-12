@@ -18,8 +18,7 @@ const IndexPage = () => (
 		</div>
 		<div>
 			<a
-				className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-				href="https://github.com/tannerlinsley/react-table"
+				className="anchor" href="https://github.com/tannerlinsley/react-table"
 			>
 				React Table Repository
 			</a>
@@ -36,10 +35,17 @@ const IndexPage = () => (
 		</ul>
 
 		<h4 className="mb-0 text-lg font-bold">The examples</h4>
-		<ul className="list-disc ml-8">
+        Links to the original CRA examples can be found in the sidebar&nbsp;
+        <a className="anchor" href="https://react-table.tanstack.com/docs/examples/basic">here</a>.
+		<ul className="list-disc ml-8 mt-4">
 			<li>
-				<Link className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" to="basic">
+				<Link className="anchor" to="basic">
 					Basic
+				</Link>
+			</li>
+            <li>
+				<Link className="anchor" to="full-width-resizable">
+					Full Width Resizable
 				</Link>
 			</li>
 		</ul>

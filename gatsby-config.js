@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Demo pages for basic-table`,
-    description: `A study of Basic Table examples implemented with Gatsby`,
+    title: `Gatsby pages demonstrating React Table`,
+    description: `A study of React Table examples implemented with Gatsby`,
     author: `@witcradg`,
   },
   plugins: ['gatsby-plugin-postcss']
