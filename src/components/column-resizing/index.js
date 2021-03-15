@@ -64,7 +64,7 @@ export default function ColumnResizing() {
   const data = React.useMemo(() => makeData(10), [])
 
   return (
-      <Layout title="Column Resizing">
+      <Layout title="React Table: Column Resizing">
     <Styles>
       <Table columns={columns} data={data} />
     </Styles>
