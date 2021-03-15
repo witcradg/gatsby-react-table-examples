@@ -2,71 +2,76 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Layout from '../layout';
-import getColumnDefinitions from './columnDefinitions';
+import getColumnDefinitions from '../../util/columnDefinitions';
 
 import makeData from '../../util/makeData';
 import { Table } from './Table';
 
 const Styles = styled.div`
-	padding: 1rem;
-	${'' /* These styles are suggested for the table fill all available space in its containing element */} display: block;
-	${'' /* These styles are required for a horizontaly scrollable table overflow */} overflow: auto;
+  padding: 1rem;
+  ${'' /* These styles are suggested for the table fill all available space in its containing element */}
+  display: block;
+  ${'' /* These styles are required for a horizontaly scrollable table overflow */}
+  overflow: auto;
 
-	.table {
-		border-spacing: 0;
-		border: 1px solid black;
+  .table {
+    border-spacing: 0;
+    border: 1px solid black;
 
-		.thead {
-			${'' /* These styles are required for a scrollable body to align with the header properly */} overflow-y: auto;
-			overflow-x: hidden;
-		}
+    .thead {
+      ${'' /* These styles are required for a scrollable body to align with the header properly */}
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
 
-		.tbody {
-			${'' /* These styles are required for a scrollable table body */} overflow-y: scroll;
-			overflow-x: hidden;
-			height: 250px;
-		}
+    .tbody {
+      ${'' /* These styles are required for a scrollable table body */}
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 250px;
+    }
 
-		.tr {
-			:last-child {
-				.td {
-					border-bottom: 0;
-				}
-			}
-			border-bottom: 1px solid black;
-		}
+    .tr {
+      :last-child {
+        .td {
+          border-bottom: 0;
+        }
+      }
+      border-bottom: 1px solid black;
+    }
 
-		.th,
-		.td {
-			margin: 0;
-			padding: 0.5rem;
-			border-right: 1px solid black;
+    .th,
+    .td {
+      margin: 0;
+      padding: 0.5rem;
+      border-right: 1px solid black;
 
-			${'' /* In this example we use an absolutely position resizer,
-       so this is required. */} position: relative;
+      ${'' /* In this example we use an absolutely position resizer,
+       so this is required. */}
+      position: relative;
 
-			:last-child {
-				border-right: 0;
-			}
+      :last-child {
+        border-right: 0;
+      }
 
-			.resizer {
-				right: 0;
-				background: blue;
-				width: 10px;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				z-index: 1;
-				${'' /* prevents from scrolling while dragging on touch devices */} touch-action :none;
+      .resizer {
+        right: 0;
+        background: blue;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        ${'' /* prevents from scrolling while dragging on touch devices */}
+        touch-action :none;
 
-				&.isResizing {
-					background: red;
-				}
-			}
-		}
-	}
-`;
-
+        &.isResizing {
+          background: red;
+        }
+      }
+    }
+  }
+`
 export const headerProps = (props, { column }) => getStyles(props, column.align);
 
 export const cellProps = (props, { cell }) => getStyles(props, cell.column.align);
@@ -130,6 +135,9 @@ export default function FullWidthResizableTable() {
 			<Styles>
 				<Table columns={columns} data={data} />
 			</Styles>
+            <p className="px-4">Notes:</p>
+            <p className="p-4">The introduction of "Full Width" beyond just "Column Resizing" seems to have introduced an issue with the header column alignment as can be seen both here <span className="underline">and in the official example</span> <a className="anchor" href="https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/full-width-resizable-table?file=/src/App.js:2396-5444">here</a>. The more columns are added the further the creep of the column alignment mismatch.</p>
+            <p className="px-4">As much as I'd like to resolve this, I just don't have the time.</p>
 		</React.Fragment>
 	);
 }
