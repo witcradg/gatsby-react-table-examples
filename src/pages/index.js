@@ -48,6 +48,11 @@ const IndexPage = () => (
 					Full Width Resizable
 				</Link>
 			</li>
+            <li>
+				<Link className="anchor" to="column-resizing">
+					Column Resizing
+				</Link>
+			</li>            
 		</ul>
 	</Layout>
 );
