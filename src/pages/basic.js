@@ -1,10 +1,10 @@
 import React from 'react';
 import Basic from '../components/basic'
 
-const Configuration = () => {
+const BasicPage = () => {
 	return (
         <Basic />
 	);
 };
 
-export default Configuration;
+export default BasicPage;

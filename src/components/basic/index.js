@@ -88,19 +88,26 @@ export default function Basic() {
 				columns: [
 					{
 						Header: 'Age',
-						accessor: 'age'
+						accessor: 'age',
+                        width: '100px'
+
 					},
 					{
 						Header: 'Visits',
-						accessor: 'visits'
-					},
+						accessor: 'visits',
+                        width: '100px'
+
+                    },
 					{
 						Header: 'Status',
-						accessor: 'status'
-					},
+						accessor: 'status',
+                        width: '100px'
+
+                    },
 					{
 						Header: 'Profile Progress',
-						accessor: 'progress'
+						accessor: 'progress',
+                        width: '100px'
 					}
 				]
 			}

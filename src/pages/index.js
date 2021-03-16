@@ -17,9 +17,7 @@ const IndexPage = () => (
 			</a>
 		</div>
 		<div>
-			<a
-				className="anchor" href="https://github.com/tannerlinsley/react-table"
-			>
+			<a className="anchor" href="https://github.com/tannerlinsley/react-table">
 				React Table Repository
 			</a>
 		</div>
@@ -33,26 +31,35 @@ const IndexPage = () => (
 			<li className="m-0 ml-8">as a learning tool</li>
 			<li className="m-0 mb-4 ml-8">as a resource for future projects</li>
 		</ul>
-
 		<h4 className="mb-0 text-lg font-bold">The examples</h4>
-        Links to the original CRA examples can be found in the sidebar&nbsp;
-        <a className="anchor" href="https://react-table.tanstack.com/docs/examples/basic">here</a>.
+		Links to the original CRA examples can be found in the sidebar&nbsp;
+		<a className="anchor" href="https://react-table.tanstack.com/docs/examples/basic">
+			here
+		</a>.
 		<ul className="list-disc ml-8 mt-4">
 			<li>
 				<Link className="anchor" to="basic">
 					Basic
 				</Link>
 			</li>
-            <li>
+			<li>
 				<Link className="anchor" to="full-width-resizable">
 					Full Width Resizable
 				</Link>
 			</li>
-            <li>
+			<li>
 				<Link className="anchor" to="column-resizing">
 					Column Resizing
 				</Link>
-			</li>            
+			</li>
+		</ul>
+		<h4 className="pt-4 mb-0 text-lg font-bold">Additional examples</h4>
+		<ul className="list-disc ml-8 mt-4">
+			<li>
+				<Link className="anchor" to="single-column-width">
+					Set single column width
+				</Link>
+			</li>
 		</ul>
 	</Layout>
 );
