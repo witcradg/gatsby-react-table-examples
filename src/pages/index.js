@@ -60,6 +60,11 @@ const IndexPage = () => (
 					Set single column width
 				</Link>
 			</li>
+			<li>
+				<Link className="anchor" to="integration">
+					combining initial width with resizing
+				</Link>
+			</li>
 		</ul>
 	</Layout>
 );
