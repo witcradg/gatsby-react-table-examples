@@ -52,6 +52,11 @@ const IndexPage = () => (
 					Column Resizing
 				</Link>
 			</li>
+			<li>
+				<Link className="anchor" to="editable-data">
+					Editable Data
+				</Link>
+			</li>            
 		</ul>
 		<h4 className="pt-4 mb-0 text-lg font-bold">Additional examples</h4>
 		<ul className="list-disc ml-8 mt-4">
